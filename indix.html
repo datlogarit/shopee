@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets\css\base.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- nhúng link find-icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <!-- nhúng link reset css -->
+    <script src="./assets/js/index.js"></script>
+</head>
+
+<body>
+    <div class="app">
+        <header class="header">
+            <nav class="navbar">
+                <ul class="navbar__list">
+                    <li class="navbar__list__item item">
+                        <a href="#">Kênh người bán</a>
+                    </li>
+                    <div class="navbar__list__item vertical">|</div>
+                    <li class="navbar__list__item item">
+                        <a href="#">Trở thành người bán Shopee</a>
+                    </li>
+                    <div class="navbar__list__item vertical">|</div>
+                    <li class="navbar__list__item qr">
+                        <p class="item psado">Tải ứng dụng</p>
+                        <div class="header--qr">
+                            <img class="qr-code" src="./assets/img/qr--code.png" alt="ảnh qr">
+                            <div class="qr-code--download">
+                                <a href="#">
+                                    <img src="./assets/img/app-store--icon.png" alt="" class="qr-code--download--img">
+                                </a>
+                                <a href="#">
+                                    <img src="./assets/img/google-play--icon.png" alt="" class="qr-code--download--img">
+                                </a>
+                            </div>
+
+
+                        </div>
+                    </li>
+                    <div class="navbar__list__item vertical">|</div>
+                    <li class="navbar__list__item">
+                        Kết nối
+                    </li>
+                    <li class="navbar__list__item navbar__icon">
+                        <a href="#" class="navbar__icon__link">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="#" class="navbar__icon__link">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar__list">
+                    <li class="navbar__list__item noti">
+                        <a href="#" class="item psado ">
+                            <i class="fa-regular fa-bell"></i>
+                            Thông báo
+                        </a>
+                        <div class="notify">
+                            <a href="#">
+                                <header class="notify__header">Thông Báo Mới Nhận</header>
+                            </a>
+                            <ul class="notify__body">
+                                <li class="notify__body__item" onclick="changeColor(this)">
+                                    <a href="#">
+                                        <img src="https://down-vn.img.susercontent.com/file/vn-50009109-0b45237e80de7f234b879c08414c0e99"
+                                            alt="">
+                                        <div class="notify__body__item__text">
+                                            <h4 class="text">GIỜ VÀNG TUNG VOUCHER PHỦ PHÊ</h4>
+                                            <P class="text">voucher xtra đến 200k</P>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="notify__body__item" onclick="changeColor(this)">
+                                    <a href="#">
+                                        <img src="https://down-vn.img.susercontent.com/file/vn-50009109-66abcdd753b27596989639544faa389d"
+                                            alt="">
+                                        <div class="notify__body__item__text">
+                                            <h4 class="text">ĐÁNH GIÁ SẢN PHẨM</h4>
+                                            <P class="text">xin vui lòng đánh giá sản phẩm </P>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="notify__body__item" onclick="changeColor(this)">
+                                    <a href="#">
+                                        <img src="https://down-vn.img.susercontent.com/file/vn-50009109-47118aa12b70f88ee948d5288e35364b"
+                                            alt="">
+                                        <div class="notify__body__item__text">
+                                            <h4 class="text">CHIA SẺ NHẬN XÉT VỀ SẢN PHẨM </h4>
+                                            <P class="text">đơn hàng đã được hoàn thành</P>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class=" notify__flooter">
+                                <a href="#">Xem Tất Cả</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="navbar__list__item item">
+                        <a href="#">
+                            <i class="fa-regular fa-circle-question"></i>
+                            Hỗ Trợ
+                        </a>
+                    </li>
+                    <li class="navbar__list__item item">
+
+                        <a href="#">
+                            <i class="fa-solid fa-earth-americas"></i>
+                            Tiếng Việt
+                        </a>
+                    </li>
+
+                    <li class="navbar__list__item item">Đăng Ký</li>
+                    <div class="navbar__list__item vertical">|</div>
+                    <li class="navbar__list__item item">Đăng Nhập</li>
+                </ul>
+            </nav>
+            <div class="header-main">
+                <div class="header-main__logo">
+                    <a href="#">
+                        <i class="fa-brands fa-amazon"></i>
+                    </a>
+                </div>
+                <div class="header-main__search__more">
+                    <div class="header-main__search">
+                        <input type="text" placeholder="Đăng ký và nhận voucher bạn mới đến 70k!">
+                        <button>
+                            <a href="#" class="button-search">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </a>
+                        </button>
+                    </div>
+                    <div class="header-main__more">
+                        <ul class="header-main__more__list">
+                            <a href="#" class="header-main__more__link">
+                                <li class="header-main__more__item">Dép</li>
+                            </a>
+                            <a href="#" class="header-main__more__link">
+                                <li class="header-main__more__item">Áo Crotop</li>
+                            </a>
+                            <a href="#" class="header-main__more__link">
+                                <li class="header-main__more__item">Ốp Iphone</li>
+                            </a>
+                            <a href="#" class="header-main__more__link">
+                                <li class="header-main__more__item">Túi Xách Nữ</li>
+                            </a>
+                            <a href="#" class="header-main__more__link">
+                                <li class="header-main__more__item">Váy</li>
+                            </a>
+                            <a href="#" class="header-main__more__link">
+                                <li class="header-main__more__item">Set Đồ Nữ</li>
+                            </a>
+                            <a href="#" class="header-main__more__link">
+                                <li class="header-main__more__item">Áo Khoác</li>
+                            </a>
+                            <a href="#" class="header-main__more__link">
+                                <li class="header-main__more__item">Tai Nghe</li>
+                            </a>
+                            <a href="#" class="header-main__more__link">
+                                <li class="header-main__more__item">Quần Ống Rộng</li>
+                            </a>
+                            <a href="#" class="header-main__more__link">
+                                <li class="header-main__more__item">Kem Chống Nắng</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header-main__cart">
+                    <a href="#" class="cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </a>
+                    <div class="notify-cart">
+
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="grid__colum-2">
+                        <div class="catolery">
+                            <div class="catolery__header">
+                                <i class="fa-solid fa-list"></i>
+                                Danh Mục
+                            </div>
+                            <div class="catolery__list__all">
+                                <ul class="catolery__lists">
+                                    <li class="catolery__item item1">
+                                        <a href="#">Đồng Hồ Casio</a>
+                                    </li>
+                                    <li class="catolery__item">
+                                        <a href="#">Máy Tính Casio</a>
+                                    </li>
+                                    <li class="catolery__item">
+                                        <a href="#">Đồ Dùng Học Tập</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="grid__colum-10">
+                        <div class="block__filter">
+                            <nav class="narbar-body">
+                                <label for="text" class="narbar-body__select-vague">
+                                    Sắp xếp theo
+                                </label>
+
+                                <button class="narbar-body__select select1">
+                                    <a href="#">Phổ Biến</a>
+                                </button>
+                                <button class="narbar-body__select select2">
+                                    <a href="#">Mới Nhất</a>
+                                </button>
+                                <button class="narbar-body__select select3">
+                                    <a href="#">Bán Chạy</a>
+                                </button>
+                                <input type="text" class="narbar-body__select__cost" placeholder="Giá" required>
+                            </nav>
+                        </div>
+
+                        <div class="body-product">
+                            <div class="grid__colum-2--same">
+                                <a href="#" class="body-product__link">
+                                    <img class="body-product__link__img"
+                                        src="https://t2.gstatic.com/images?q=tbn:ANd9GcQOIKntrSNnl0FgHxgDenr7VzE0ySVvTd-cj4lcPjWDPbLCxZTF"
+                                        alt="ảnh móng tay">
+                                    <div class="body-product__link__text">
+                                        <h5>Đồng hồ nam dây da casio MTP-V004L-1AUDF chính hãng</h5>
+                                        <div class="body-product__link__cost">
+                                            <p class="body-product__link__cost__start">803.000</p>
+                                            <div class="body-product__link__cost__end">
+                                                <p class="unit">đ</p>
+                                                <p class="cost">642.400</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rate">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <p>Đã bán 1k</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__colum-2--same">
+                                <a href="#" class="body-product__link">
+                                    <img class="body-product__link__img"
+                                        src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRtyZ8Tt2PL86ugRi_heSYuBxCVp8Y21VFoIlcjiQa85H-rOEnt"
+                                        alt="ảnh móng tay">
+                                    <div class="body-product__link__text">
+                                        <h5>Đồng hồ casio nam, dây nhựa trẻ trung. vô cùng thời trang</h5>
+                                        <div class="body-product__link__cost">
+                                            <p class="body-product__link__cost__start">570.000</p>
+                                            <div class="body-product__link__cost__end">
+                                                <p class="unit">đ</p>
+                                                <p class="cost">456.000</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rate">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <p>Đã bán 1k</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__colum-2--same">
+                                <a href="#" class="body-product__link">
+                                    <img class="body-product__link__img"
+                                        src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTtsKVkOtVt0Pi_amn8pb7X6Qa1Gg3JzR_EUd73wHW0SxzfTzNJ"
+                                        alt="ảnh móng tay">
+                                    <div class="body-product__link__text">
+                                        <h5>Dây đồng hồ casio MRW-200H cao su chính hãng cỡ 18mm</h5>
+                                        <div class="body-product__link__cost">
+                                            <p class="body-product__link__cost__start">169.000</p>
+                                            <div class="body-product__link__cost__end">
+                                                <p class="unit">đ</p>
+                                                <p class="cost">143.650</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rate">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <p>Đã bán 1k</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__colum-2--same">
+                                <a href="#" class="body-product__link">
+                                    <img class="body-product__link__img"
+                                        src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTESHMuqAhyRlB8tbVE16KhrD6TlE7bVeO-LrXMoCN7qebRWMft"
+                                        alt="ảnh móng tay">
+                                    <div class="body-product__link__text">
+                                        <h5>Đồng hồ nữ dây kim loại chính hãng Casio LA670WA-1DF</h5>
+                                        <div class="body-product__link__cost">
+                                            <p class="body-product__link__cost__start">960.000</p>
+                                            <div class="body-product__link__cost__end">
+                                                <p class="unit">đ</p>
+                                                <p class="cost">768.000</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rate">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <p>Đã bán 1k</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__colum-2--same">
+                                <a href="#" class="body-product__link">
+                                    <img class="body-product__link__img"
+                                        src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcThlP_hCF0nXTfYbDkP2eJFsgTidnb0tyaWf5fleyQQlIPAmHV2"
+                                        alt="ảnh móng tay">
+                                    <div class="body-product__link__text">
+                                        <h5>Đồng Hồ Nữ Dây Da Chính Hãng Casio LTP-V006L-4BUDF</h5>
+                                        <div class="body-product__link__cost">
+                                            <p class="body-product__link__cost__start">856.000</p>
+                                            <div class="body-product__link__cost__end">
+                                                <p class="unit">đ</p>
+                                                <p class="cost">684.800</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rate">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <p>Đã bán 1k</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__colum-2--same">
+                                <a href="#" class="body-product__link">
+                                    <img class="body-product__link__img"
+                                        src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTM8C4oOe2bauOi7-qEL5UPleMGbDZJlJm1QH8xEeq7j_xTmblc"
+                                        alt="ảnh móng tay">
+                                    <div class="body-product__link__text">
+                                        <h5>Đồng Hồ Nữ Dây Da Chính Hãng CASIO LTP-V007L-7E1UDF</h5>
+                                        <div class="body-product__link__cost">
+                                            <p class="body-product__link__cost__start">752.000</p>
+                                            <div class="body-product__link__cost__end">
+                                                <p class="unit">đ</p>
+                                                <p class="cost">601.600</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rate">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <p>Đã bán 1k</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__colum-2--same">
+                                <a href="#" class="body-product__link">
+                                    <img class="body-product__link__img"
+                                        src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT2mjcg__zXMeEDILHs1O04oe0wXRZ8-FG5Ay-AZgyyDCi8CWYD"
+                                        alt="ảnh móng tay">
+                                    <div class="body-product__link__text">
+                                        <h5>Đồng hồ Nam Dây Nhựa Casio G-Shock GA-2100-1A1</h5>
+                                        <div class="body-product__link__cost">
+                                            <p class="body-product__link__cost__start">3.602.000</p>
+                                            <div class="body-product__link__cost__end">
+                                                <p class="unit">đ</p>
+                                                <p class="cost">2.648.340</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rate">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <p>Đã bán 1k</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__colum-2--same">
+                                <a href="#" class="body-product__link">
+                                    <img class="body-product__link__img"
+                                        src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRm_tbsqdIgJpIxsUuNIUe9Yg1yysKcyRjiCNaIP4kqgbxC1F3L"
+                                        alt="ảnh móng tay">
+                                    <div class="body-product__link__text">
+                                        <h5>Đồng hồ Casio nam chính hãng MRW-200H-1B3VDF dây cao su</h5>
+                                        <div class="body-product__link__cost">
+                                            <p class="body-product__link__cost__start">852.000</p>
+                                            <div class="body-product__link__cost__end">
+                                                <p class="unit">đ</p>
+                                                <p class="cost">684.900</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rate">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <p>Đã bán 2k</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__colum-2--same">
+                                <a href="#" class="body-product__link">
+                                    <img class="body-product__link__img"
+                                        src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQKOi_U7st8nyHWIpf53nsjaDaWNdF04erAmLssmxr-RzJ34Xdi"
+                                        alt="ảnh móng tay">
+                                    <div class="body-product__link__text">
+                                        <h5>Đồng Hồ Quartz SANDA 739 Màn Hình LED Kỹ Thuật Số Báo Thức Chống Nước Phong
+                                            Cách Thể Thao</h5>
+                                        <div class="body-product__link__cost">
+                                            <p class="body-product__link__cost__start">340.000</p>
+                                            <div class="body-product__link__cost__end">
+                                                <p class="unit">đ</p>
+                                                <p class="cost">198.900</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rate">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <p>Đã bán 1k</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__colum-2--same">
+                                <a href="#" class="body-product__link">
+                                    <img class="body-product__link__img"
+                                        src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTOGKLsvy57gOi8f1RiLRTFdRjXmptSioj19KW9HLX389Exqi2n"
+                                        alt="ảnh móng tay">
+                                    <div class="body-product__link__text">
+                                        <h5>Đồng Hồ Quartz Sanda SD1063-3 Hình Xe Đua Độc Đáo</h5>
+                                        <div class="body-product__link__cost">
+                                            <p class="body-product__link__cost__start">462.000</p>
+                                            <div class="body-product__link__cost__end">
+                                                <p class="unit">đ</p>
+                                                <p class="cost">382.100</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rate">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <p>Đã bán 1k</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="change-page">
+                            <div class="change-page__back">
+                                <a href="#" class="the__a">
+                                    <i class="fa-solid fa-less-than"></i>
+                                </a>
+                            </div>
+                            <div class="change-page__order order1">
+                                <a href="#" class="the__a">1</a>
+                            </div>
+                            <div class="change-page__order order2">
+                                <a href="#" class="the__a">2</a>
+                            </div>
+                            <div class="change-page__next">
+                                <a href="#" class="the__a">
+                                    <i class="fa-solid fa-greater-than"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="empty__block"></div>
+            <div class="infor-app">
+                <div class="infor-app__support">
+                    <ul class="infor-app__support--list">
+                        <h3>CHĂM SÓC KHÁCH HÀNG</h3>
+                        <li class="infor-app__support--item">
+                            <a href="#">Trung Tâm Trợ Giúp</a>
+                        </li>
+                        <li class="infor-app__support--item">
+                            <a href="#">Shopee Blog</a>
+                        </li>
+                        <li class="infor-app__support--item">
+                            <a href="#">Shopee Mail</a>
+                        </li>
+                        <li class="infor-app__support--item">
+                            <a href="#">Hướng Dẫn Mua Hàng</a>
+                        </li>
+                        <li class="infor-app__support--item">
+                            <a href="#">Hướng Dẫn Bán Hàng</a>
+                        </li>
+                        <li class="infor-app__support--item">
+                            <a href="#"> Thanh Toán</a>
+                        </li>
+                        <li class="infor-app__support--item">
+                            <a href="#">Shopee Xu</a>
+                        </li>
+                        <li class="infor-app__support--item">
+                            <a href="#">Vận Chuyển</a>
+                        </li>
+                        <li class="infor-app__support--item">
+                            <a href="#">Trả Hàng & Hoàn Tiền</a>
+                        </li>
+                        <li class="infor-app__support--item">
+                            <a href="#">Chăm Sóc Khách Hàng</a>
+                        </li>
+                        <li class="infor-app__support--item">
+                            <a href="#">Chính sách bảo hành</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="infor-app__Shopee">
+                    <ul class="infor-app__support--list">
+                        <h3>VỀ SHOPEE</h3>
+                        <li class="infor-app__support--item">
+                            <a href="#">Giới Thiệu Về Shopee Việt Nam</a>
+                        </li>
+                        <li class="infor-app__support--item">
+                            <a href="#">Tuyển Dụng</a>
+                        </li>
+                        <li class="infor-app__support--item">
+                            <a href="#">Điều Khoản Shopee</a>
+                        </li>
+                        <li class="infor-app__support--item">
+                            <a href="#">Chính Sách Bảo Mật</a>
+                        </li>
+                        <li class="infor-app__support--item">
+                            <a href="#">Chính Hãng</a>
+                        </li>
+                        <li class="infor-app__support--item">
+                            <a href="#">Kênh người bán</a>
+                        </li>
+                        <li class="infor-app__support--item">
+                            <a href="#">Flash Sales</a>
+                        </li>
+                        <li class="infor-app__support--item">
+                            <a href="#">Chương Trình Tiếp Thị Liên Kết Shopee</a>
+                        </li>
+                        <li class="infor-app__support--item">
+                            <a href="#">Liên Hệ Với Truyền Thông</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="infor-app__pay-ship">
+                    <div class="infor-app__pay">
+                        <h3>THANH TOÁN</h3>
+                        <ul class="infor-app__pay--list">
+                            <li class="infor-app__pay--item">
+                                <a href="#">
+                                    <img src="https://down-vn.img.susercontent.com/file/d4bbea4570b93bfd5fc652ca82a262a8"
+                                        alt="">
+                                </a>
+                            </li>
+                            <li class="infor-app__pay--item">
+                                <a href="#">
+                                    <img src="https://down-vn.img.susercontent.com/file/a0a9062ebe19b45c1ae0506f16af5c16"
+                                        alt="">
+                                </a>
+                            </li>
+                            <li class="infor-app__pay--item">
+                                <a href="#">
+                                    <img src="https://down-vn.img.susercontent.com/file/38fd98e55806c3b2e4535c4e4a6c4c08"
+                                        alt="">
+                                </a>
+                            </li>
+                            <li class="infor-app__pay--item">
+                                <a href="#">
+                                    <img src="https://down-vn.img.susercontent.com/file/bc2a874caeee705449c164be385b796c"
+                                        alt="">
+                                </a>
+                            </li>
+                            <li class="infor-app__pay--item">
+                                <a href="#">
+                                    <img src="https://down-vn.img.susercontent.com/file/2c46b83d84111ddc32cfd3b5995d9281"
+                                        alt="">
+                                </a>
+                            </li>
+                            <li class="infor-app__pay--item">
+                                <a href="#">
+                                    <img src="https://down-vn.img.susercontent.com/file/5e3f0bee86058637ff23cfdf2e14ca09"
+                                        alt="">
+                                </a>
+                            </li>
+                            <li class="infor-app__pay--item">
+                                <a href="#">
+                                    <img src="https://down-vn.img.susercontent.com/file/9263fa8c83628f5deff55e2a90758b06"
+                                        alt="">
+                                </a>
+                            </li>
+                            <li class="infor-app__pay--item">
+                                <a href="#">
+                                    <img src="https://down-vn.img.susercontent.com/file/0217f1d345587aa0a300e69e2195c492"
+                                        alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="infor-app__pay">
+                        <h3>ĐƠN VỊ VẬN CHUYỂN</h3>
+                        <ul class="infor-app__pay--list">
+                            <li class="infor-app__pay--item">
+                                <a href="#">
+                                    <img src="https://down-vn.img.susercontent.com/file/5e7282bd0f7ee0872fdb0bd1d40fbe9e"
+                                        alt="">
+                                </a>
+                            </li>
+                            <li class="infor-app__pay--item">
+                                <a href="#">
+                                    <img src="https://down-vn.img.susercontent.com/file/d10b0ec09f0322f9201a4f3daf378ed2"
+                                        alt="">
+                                </a>
+                            </li>
+                            <li class="infor-app__pay--item">
+                                <a href="#">
+                                    <img src="https://down-vn.img.susercontent.com/file/77bf96a871418fbc21cc63dd39fb5f15"
+                                        alt="">
+                                </a>
+                            </li>
+                            <li class="infor-app__pay--item">
+                                <a href="#">
+                                    <img src="https://down-vn.img.susercontent.com/file/59270fb2f3fbb7cbc92fca3877edde3f"
+                                        alt="">
+                                </a>
+                            </li>
+                            <li class="infor-app__pay--item">
+                                <a href="#">
+                                    <img src="https://down-vn.img.susercontent.com/file/957f4eec32b963115f952835c779cd2c"
+                                        alt="">
+                                </a>
+                            </li>
+                            <li class="infor-app__pay--item">
+                                <a href="#">
+                                    <img src="https://down-vn.img.susercontent.com/file/3900aefbf52b1c180ba66e5ec91190e5"
+                                        alt="">
+                                </a>
+                            </li>
+                            <li class="infor-app__pay--item">
+                                <a href="#">
+                                    <img src="https://down-vn.img.susercontent.com/file/5e3f0bee86058637ff23cfdf2e14ca09"
+                                        alt="">
+                                </a>
+                            </li>
+                            <li class="infor-app__pay--item">
+                                <a href="#">
+                                    <img src="https://down-vn.img.susercontent.com/file/6e3be504f08f88a15a28a9a447d94d3d"
+                                        alt="">
+                                </a>
+                            </li>
+                            <li class="infor-app__pay--item">
+                                <a href="#">
+                                    <img src="https://down-vn.img.susercontent.com/file/b8348201b4611fc3315b82765d35fc63"
+                                        alt="">
+                                </a>
+                            </li>
+                            <li class="infor-app__pay--item">
+                                <a href="#">
+                                    <img src="https://down-vn.img.susercontent.com/file/0b3014da32de48c03340a4e4154328f6"
+                                        alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="follow-me__on__big">
+                    <h3>THEO DÕI CHÚNG TÔI TRÊN</h3>
+                    <div class="follow-me__on">
+                        <div class="follow-me__on__app">
+                            <a href="#">
+                                <i class="fa-brands fa-facebook"></i>
+                                Facebook
+                            </a>
+                        </div>
+                        <div class="follow-me__on__app">
+                            <a href="#">
+                                <i class="fa-brands fa-instagram"></i>
+                                Instagram
+                            </a>
+                        </div>
+                        <div class="follow-me__on__app">
+                            <a href="#">
+                                <i class="fa-brands fa-linkedin"></i>
+                                Linkedln
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="down-app-now">
+                    <h3>TẢI ỨNG DỤNG SHOPEE NGAY THÔI</h3>
+                    <a href="#" class="down-app-now__link">
+                        <img src="https://down-vn.img.susercontent.com/file/a5e589e8e118e937dc660f224b9a1472"
+                            alt="ảnh qr">
+                        <div class="down-app-now__qr">
+                            <img src="https://down-vn.img.susercontent.com/file/ad01628e90ddf248076685f73497c163"
+                                alt="ảnh app store">
+                            <img src="https://down-vn.img.susercontent.com/file/ae7dced05f7243d0f3171f786e123def"
+                                alt="ảnh gg play">
+                            <img src="https://down-vn.img.susercontent.com/file/35352374f39bdd03b25e7b83542b2cb0"
+                                alt="ảnh appgallery">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="infor-app__2">
+                <div class="infor-app__2--block-1">
+                    <i class="fa-regular fa-copyright"></i>
+                    <p>2023 Shopee. Tất cả các bản quyền được bảo lưu</p>
+                </div>
+                <div class="infor-app__2--block-2">
+                    <p>Quốc gia và khu vực</p>
+                    <a href="#">Singapore</a>
+                    <div class="navbar__list__item vertical2">|</div>
+                    <a href="#">Indonesia</a>
+                    <div class="navbar__list__item vertical2">|</div>
+                    <a href="#">Đài Loan</a>
+                    <div class="navbar__list__item vertical2">|</div>
+                    <a href="#">Thái Lan</a>
+                    <div class="navbar__list__item vertical2">|</div>
+                    <a href="#">Malaysia</a>
+                    <div class="navbar__list__item vertical2">|</div>
+                    <a href="#">Việt Nam</a>
+                    <div class="navbar__list__item vertical2">|</div>
+                    <a href="#">Philippines</a>
+                    <div class="navbar__list__item vertical2">|</div>
+                    <a href="#">Brazil</a>
+                    <div class="navbar__list__item vertical2">|</div>
+                    <a href="#">Mexico</a>
+                    <div class="navbar__list__item vertical2">|</div>
+                    <a href="#">Columbia</a>
+                    <div class="navbar__list__item vertical2">|</div>
+                    <a href="#">Chile</a>
+                </div>
+            </div>
+
+            <div class="infor-app__3">
+                <div class="infor-app__3__row1">
+                    <ul class="infor-app__3__row1__list">
+                        <li class="infor-app__3__row1__item">
+                            <a href="#">CHÍNH SÁCH BẢO MẬT</a>
+                        </li>
+                        <li class="infor-app__3__row1__item">
+                            <a href="#">QUY CHẾ HOẠT ĐỘNG</a>
+                        </li>
+                        <li class="infor-app__3__row1__item">
+                            <a href="#">CHÍNH SÁCH VẬN CHUYỂN</a>
+                        </li>
+                        <li class="infor-app__3__row1__item">
+                            <a href="#">CHÍNH SÁCH TRẢ HÀNG VÀ HOÀN TIỀN</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="infor-app__3__row2">
+                    <a href="#" class="infor-app__3__row2__link">
+                        <img src="http://online.gov.vn/Content/EndUser/LogoCCDVSaleNoti/logoCCDV.png" alt="">
+                    </a>
+                    <a href="#" class="infor-app__3__row2__link">
+                        <img src="http://online.gov.vn/Content/EndUser/LogoCCDVSaleNoti/logoCCDV.png" alt="">
+                    </a>
+                    <a href="#" class="infor-app__3__row2__link">
+                        <img src="http://online.gov.vn/Content/EndUser/LogoCCDVSaleNoti/logoCCDV.png" alt="">
+                    </a>
+                </div>
+                <div class="infor-app__3__row3">
+                    <p>Công ty TNHH Shopee</p>
+                </div>
+                <div class="infor-app__3__row4">
+                    <p>Địa chỉ: Tầng 4-5-6, Tòa nhà Capital Place,
+                        số 29 đường Liễu Giai, Phường Ngọc Khánh,
+                        Quận Ba Đình, Thành phố Hà Nội, Việt Nam.
+                        Tổng đài hỗ trợ: 19001221 -
+                        Email: cskh@hotro.shopee.vn
+                    </p>
+                </div>
+                <div class="infor-app__3__row4">
+                    <p>
+                        Chịu Trách Nhiệm Quản Lý Nội Dung: Nguyễn Đức Trí
+                        - Điện thoại liên hệ: 024 73081221 (ext 4678)
+                    </p>
+                </div>
+                <div class="infor-app__3__row4">
+                    <p>
+                        Mã số doanh nghiệp: 0106773786 do Sở Kế hoạch
+                        & Đầu tư TP Hà Nội cấp lần đầu ngày 10/02/2015
+                    </p>
+                </div>
+                <div class="infor-app__3__row4">
+                    <p>
+
+                        © 2015 - Bản quyền thuộc về Công ty TNHH Shopee
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- modal -->
+        <!-- <div class="modal">
+
+
+
+        </div> -->
+
+
+        <!-- <div class="modal__cover">
+
+            <div class="modal__infor">
+                <div class="modal__innner">
+                    <div class="form">
+                        <div class="authen-form__header">
+                            <h3 class="authen-form__heading">Đăng ký</h3>
+                            <span class="authen-form__header--btn">Đăng nhập</span>
+                        </div>
+                        <div class="form__input">
+                            <div class="form__input__groups">
+                                <input type="email" class="form__input__email form__input__all " placeholder="Email của bạn"
+                                    required>
+                            </div>
+                            <div class="form__input__groups">
+                                <input type="password" class="form__input__pw form__input__all" placeholder="Mật khẩu"
+                                    required>
+                            </div>
+                            <div class="form__input__groups">
+                                <input type="password" class="form__input__rpw form__input__all"
+                                    placeholder="Nhập lại mật khẩu" required>
+                            </div>
+                        </div>
+                        <div class="chinh-sach">
+                            Bằng việc đăng ký, bạn đã đồng ý với Shopee về
+                            <a href="#" class="chinh-sach-a">điều khoản dịch vụ</a> &
+                            <a href="#" class="chinh-sach-a">chính sách bảo mật</a>
+                        </div>
+                        <div class="form-btn">
+                            <button class="form-btn--item back">TRỞ LẠI</button>
+                            <button class="form-btn--item signin">ĐĂNG KÝ</button>
+                        </div>
+    
+                        <div class="form-contact">
+                            <div class="form-contact--item fb">
+                                <a href="#" class="fb--color-text">
+                                    <i class="fa-brands fa-square-facebook"></i>
+                                    <span> Kết nối với Facebook</span>
+                                </a>
+                            </div>
+                            <div class="form-contact--item gg">
+                                <a href="#" class="gg--color-text">
+                                    <i class="fa-brands fa-google"></i>
+                                    <span>Kết nối với Google</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div> -->
+
+    </div>
+</body>
+
+</html>
